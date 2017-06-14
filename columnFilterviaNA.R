@@ -17,11 +17,11 @@ filterdata <- data[ , colSums(is.na(data)) <= 100]
 dim(filterdata)
 
 
-
+#delete raws that have NA more than 10% 
 rowFilterData <- filterdata[ rowSums(is.na(filterdata)) <= 3,]
 
 
 dim(rowFilterData)
 
-write.csv(rowFilterData, file = "dataafterColumnFilter.csv")
+write.csv(rowFilterData, file = "data/afterColumnFilter.csv")
 
